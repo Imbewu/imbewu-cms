@@ -1,0 +1,36 @@
+
+<app-navbar></app-navbar>
+<div class="container mt-5">
+  <h3 class="text-center">Computer class Application</h3>
+    <table class="table table-striped mt-5">
+        <thead>
+          <tr>
+            
+            <th scope="col">Name and Surname</th>
+            
+            <th scope="col">Surname</th>
+            <th scope="col">Id</th>
+            <th scope="col">Address</th>
+            <th scope="col">Contact Number</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let list of computerClassList">
+          <tr>
+            
+            <td>{{list.name}}</td>
+            <td>{{list.email}}</td>
+            <td>{{list.key}}</td>
+           
+            <td>{{list.Address}}</td>
+            <td>{{list.Address}}</td>
+            <td>{{list.Contact}}</td>
+          </tr>
+          </tbody>
+      </table>
+
+
+     <div >
+      <angular2csv [data]="List" filename="computerclass.csv" [options]="options">Download</angular2csv>
+     </div>
+</div>
+
